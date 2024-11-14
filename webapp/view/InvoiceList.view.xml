@@ -10,13 +10,17 @@ controllerName="ui5.walkthrough.controller.InvoiceList"
       class="sapUiResponsiveMargin"
       width="auto"
       items="{invoice>/Invoices}" >
-      <headerToolBar>
-      <Toolbar>
-      <Title text="{i18n>invoiceListTitle}"/>
-      <ToolbarSpace/>
-      <SearchField width="50%" search=".onFilterInvoices"/>
-      </Toolbar>
-      </headerToolBar>
+
+      <headerToolbar>
+         <Toolbar>
+            <Title text="{i18n>invoiceListTitle}"/>
+            <ToolbarSpacer/>
+            <SearchField 
+               width="50%" 
+               search=".onFilterInvoices"/>
+         </Toolbar>
+      </headerToolbar>
+
       <items>
          <ObjectListItem
             title="{invoice>Quantity} x {invoice>ProductName} and {invoice>Status}"
