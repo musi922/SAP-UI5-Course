@@ -9,7 +9,14 @@ controllerName="ui5.walkthrough.controller.InvoiceList"
       headerText="{i18n>invoiceListTitle}"
       class="sapUiResponsiveMargin"
       width="auto"
-      items="{invoice>/Invoices}" >
+       items="{
+         path : 'invoice>/Invoices',
+         sorter : {
+            path : 'ShipperName',
+            group: true 
+         }
+      }"
+       >
 
       <headerToolbar>
          <Toolbar>
@@ -46,7 +53,7 @@ controllerName="ui5.walkthrough.controller.InvoiceList"
             }"/>
             </firstStatus>
             </ObjectListItem>
-        
+           
       </items>
    </List>
 </mvc:View>
