@@ -25,6 +25,10 @@
 		  "desktop": true,
 		  "tablet": true,
 		  "phone": true
+	  },
+	  "contentDensities":{
+		"compact":true,
+		"cozy":true
 	  }
 	},
 	"sap.ui5": {

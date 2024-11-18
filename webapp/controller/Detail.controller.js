@@ -1,10 +1,15 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/core/routing/History",
-    "Sap/m/MessageToast"
-],(Controller,History,MessageToast)=>{
+    "Sap/m/MessageToast",
+    "sap/ui/model/json/JSONModel"
+],(Controller,History,MessageToast,JSONModel)=>{
    return Controller.extend("ui5.walkthrough.controller.Detail",{
     onInit(){
+        const oViewModel = new JSONModel({
+            currency:"EUR"
+        })
+        this.getView().setModel(oViewModel,"view")
         const oRouter = this.getOwnerComponent().getRouter()
         oRouter.getRoute("detail").attachPatternMatched(this.onObjectMatched,this)
     },
