@@ -11,3 +11,9 @@ html[dir="rtl"] .myAppStyles .myCustomButton.sapMBtn {
     color: red;
     
 }
+.myAppDemoWTProductRating {
+    padding: 0.75rem;
+}
+.myAppDemoWTProductRating .sapMRI{
+    vertical-align: initial;
+}
